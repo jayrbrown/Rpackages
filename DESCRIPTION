@@ -1,0 +1,9 @@
+Package: Rpackages
+Title: Coursera Package Course
+Version: 0.1
+Authors@R: person("Jay", "Brown", email = "jay@systemicresult.com",
+                  role = c("aut", "cre"))
+Description: Learn how to create a package.
+Depends: R (>= 3.1.0)
+License: CCO
+LazyData: true
