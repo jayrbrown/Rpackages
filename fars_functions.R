@@ -104,7 +104,7 @@ fars_read_years <- function(years) {
 #' 
 #' @param years A vector of years.
 #' 
-#' @return A wide dataframe of the number of observations by mopnth and year.
+#' @return A wide dataframe of the number of observations by month and year.
 #' 
 #' @importFrom dplyr bind_rows, group_by, summarize
 #' @importFrom tidyr spread 

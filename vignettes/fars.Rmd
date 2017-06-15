@@ -1,0 +1,28 @@
+---
+title: "FARS"
+author: "Jay Brown"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The FARS data provides details of accidents from 2013 to 2015. This vignette reviews the functions available in this package.
+
+The public functions provide access to the data.
+
+* fars_summarize_years 
+* fars_map_state
+
+Private functions called from the above.
+
+* fars_read
+* make_filename
+* fars_read_years
+
+
+
+## Vignette Info
+

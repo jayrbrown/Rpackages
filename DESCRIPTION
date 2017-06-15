@@ -1,9 +1,13 @@
 Package: Rpackages
-Title: Coursera Package Course
+Title: Coursera R Package Course
 Version: 0.1
 Authors@R: person("Jay", "Brown", email = "jay@systemicresult.com",
                   role = c("aut", "cre"))
-Description: Learn how to create a package and integrate with CI.
+Description: This package is created for the Johns Hopkins R Packages course.
+    The FARS data provides details of accidents in the US from 2013 to 2015. 
 Depends: R (>= 3.1.0)
-License: CCO
+License: Creative Commons Attribution 4.0 International License
 LazyData: true
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
