@@ -8,6 +8,8 @@ Description: This package is created for the Johns Hopkins R Packages course.
 Depends: R (>= 3.1.0)
 License: Creative Commons Attribution 4.0 International License
 LazyData: true
+Imports: dplyr, maps, readr, tidyr
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
+RoxygenNote: 6.0.1
