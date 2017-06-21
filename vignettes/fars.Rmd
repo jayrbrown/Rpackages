@@ -12,9 +12,9 @@ vignette: >
 ```{r setup, echo=FALSE, warning=FALSE}
 suppressMessages(library(dplyr))
 suppressMessages(library(maps))
-source("~/datasci/Rpackages/R/fars_functions.R")
+source("../R/fars_functions.R")
 suppressMessages(library(knitr))
-opts_knit$set(root.dir = "~/datasci/Rpackages/vignettes/data/")
+opts_knit$set(root.dir = "data/")
 
 ```
 
