@@ -2,15 +2,12 @@
 
 The jfars package is my version of the FARS data for the Johns Hopkins R Packages course on Coursera.
 
+Travis CI 
 [![Travis-CI Build Status](https://travis-ci.org/jayrbrown/jfars.svg?branch=master)](https://travis-ci.org/jayrbrown/jfars)
 
-* Travis CI https://travis-ci.org/profile/jayrbrown 
-* https://docs.travis-ci.com/user/languages/r 
-
+AppVeyor 
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/jayrbrown/jfars?branch=master&svg=true)](https://ci.appveyor.com/project/jayrbrown/jfars)
 
-* Appveyor https://ci.appveyor.com/project/jayrbrown/jfars
-* https://github.com/krlmlr/r-appveyor/blob/master/README.md
 
 ## Install
 
