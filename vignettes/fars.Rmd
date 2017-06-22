@@ -1,10 +1,10 @@
 ---
-title: "FARS"
+title: "jfars"
 author: "Jay Brown"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{jfars}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -34,7 +34,7 @@ The FARS package depends on several standard R packages you may already have ins
 
 ## Using the FARS Package
 
-Use the FARS data package to explore incidents of traffic fatalities.
+Use the FARS data package to explore incidents of traffic fatalities. The package will extract data from the data source noted and provide summary numbers by month and year as well as a map of a selected state indicating accident locations.
 
 The public functions provide access to the data.
 
@@ -43,18 +43,13 @@ The public functions provide access to the data.
 
 ### fars_summarize_years
 
-The function fars_summarize_years reads available FARS data and will sumarize it to provide a count of the number of fatal accidents per month in all states.
+The function fars_summarize_years reads available FARS data and will summarise it to provide a count of the number of fatal accidents per month in all states.
 
 The function takes a vector of years and reads data from derived filenames then summarizes the number of observations for each year grouped by month. It transforms the data to wide format and returns this as a data frame.
 
-param years A vector of years.
+#### Example
 
-@return A wide dataframe of the number of observations by month and year.
- 
-@importFrom dplyr bind_rows, group_by, summarize
-@importFrom tidyr spread 
-
-#### Examples
+The example shows the number of accidents by month and by year.
 
 ```{r echo = TRUE}
 
@@ -64,26 +59,15 @@ fars_summarize_years(2013:2015)
 
 ### fars_map_state
 
-The function fars_map_state takes the supplied state number and year and plots the locations of accidents on a map of the specified state.
-
-Note the maps library must be loaded in the session else it may fail.
+The function fars_map_state takes the supplied state number and year and plots the locations of accidents on a map of the specified state. This is valuable to visualise the location of accidents within a particular state. The density of accidents could be used to plan highway and intersection improvements.
 
 If an invalid state number is supplied it will error saying "invalid STATE number". State codes are standard codes as defined at [https://www2.census.gov/geo/docs/reference/state.txt]
 
-Ideally the user would be selecting the state from a menu of options as the state numbers are not common knowledge.
+If there are no accidents to plot, no map is plotted.
 
-If there are no accidents to plot, it will return null and no map is plotted.
+#### Example
 
-@param state.num An integer representing the state identifier.
-@param year An integer of the year to reference for mapping.
-
-@return A map plot showing accidents in the state within the year.
-
-@importFrom dplyr filter
-@importFrom maps map
-@importFrom graphics points
-
-#### Examples
+The example shows the location of accidents in California in 2015.
 
 ```{r echo = TRUE}
 
@@ -94,12 +78,8 @@ fars_map_state(6, 2015)
 
 ## Private Functions
 
-Private functions called from the above
+Private functions called from the above may be accessed using the convention jfars::fars_read. 
 
-* fars_read
-* make_filename
-* fars_read_years
-
-
-
-
+* fars_read Reads a specified file.
+* make_filename Generates a filename by adding a supplied year to a filename.
+* fars_read_years Reads multiple data files.

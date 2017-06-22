@@ -1,3 +1,4 @@
+globalVariables(c("MONTH", "STATE", "year", "n"))
 #' fars_read
 #'
 #' This function accepts a filename argument and opens the file using 
@@ -74,7 +75,7 @@ make_filename <- function(year) {
 #' 
 #' @return A list of data frames, one for each file.
 #' 
-#' @importFrom dplyr mutate, select
+#' @importFrom dplyr mutate select
 #' 
 #' @examples 
 #' \dontrun{
@@ -106,7 +107,7 @@ fars_read_years <- function(years) {
 #' 
 #' @return A wide dataframe of the number of observations by month and year.
 #' 
-#' @importFrom dplyr bind_rows, group_by, summarize
+#' @importFrom dplyr bind_rows group_by summarize
 #' @importFrom tidyr spread 
 #' 
 #' @examples 

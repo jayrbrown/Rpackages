@@ -1,4 +1,4 @@
-Package: Rpackages
+Package: jfars
 Title: Coursera R Package Course
 Version: 0.1
 Authors@R: person("Jay", "Brown", email = "jay@systemicresult.com",
